@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatti • Hotel Paradiso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+</head><body>
+
+<header class="header">
+  <div class="container wrap">
+    <a href="index.html" class="logo"><span class="badge"></span><span class="brand">Hotel Paradiso Portovenere</span></a>
+    <nav class="nav">
+      <a href="rooms.html">Camere & Suites</a>
+      <a href="dine.html">Ristorante & Bar</a>
+      <a href="experiences.html">Esperienze</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Dove Siamo</a>
+      <a href="contact.html">Contatti</a>
+      <a class="btn" href="#" target="_blank" rel="noopener">Prenota</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container" style="padding:36px 0">
+  <h1 class="h1">Contatti</h1>
+  <div class="split">
+    <form class="card" onsubmit="event.preventDefault(); alert('Grazie! Ti risponderemo al più presto.');">
+      <label>Nome</label><input class="input" required>
+      <label>Email</label><input class="input" type="email" required>
+      <label>Messaggio</label><textarea class="input" rows="6" required></textarea>
+      <div style="margin-top:12px"><button class="btn" type="submit">Invia richiesta</button></div>
+      <p class="fine">Compilando il form acconsenti al trattamento dei dati ai sensi della normativa vigente.</p>
+    </form>
+    <div class="card">
+      <h3>Hotel Paradiso</h3>
+      <p class="p">Lungomare, 19025 Portovenere (SP) — Italia<br>+39 0187 000000<br><a href="mailto:info@hotelparadisoportovenere.com">info@hotelparadisoportovenere.com</a></p>
+      <p class="fine">Per prenotazioni dirette e richieste di gruppo, usa il pulsante “Prenota” nel menu.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container wrap">
+    <div>
+      <div class="logo"><span class="badge"></span><span class="brand">Hotel Paradiso Portovenere</span></div>
+      <p class="fine">Lungomare, 19025 Portovenere (SP), Italia<br>+39 0187 000000 • info@hotelparadisoportovenere.com</p>
+      <p class="fine">© <span id="y"></span> Hotel Paradiso. Tutti i diritti riservati.</p>
+    </div>
+    <div>
+      <h4>Esplora</h4>
+      <p><a href="rooms.html">Camere & Suites</a><br><a href="dine.html">Ristorante & Bar</a><br><a href="experiences.html">Esperienze</a><br><a href="gallery.html">Gallery</a></p>
+    </div>
+    <div>
+      <h4>Legale</h4>
+      <p><a href="privacy.html">Privacy & Cookie</a><br><a href="contact.html">Contatti</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('y') && (document.getElementById('y').textContent=new Date().getFullYear());
+  // active link
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav a').forEach(a=>{ if(a.getAttribute('href')===path) a.classList.add('active'); });
+</script>
+</body></html>
